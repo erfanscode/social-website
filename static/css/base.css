@@ -64,4 +64,76 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+/* password change */
+.wrapper {	
+	margin-top: 5rem;
+}
 
+.form-signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 28rem;
+  padding: 1.5rem 3.5rem 4.5rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+}
+
+.form-signin h2{
+  margin-bottom: 3rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 1rem;
+	box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.form-control:focus, 
+.form-control:active {
+  z-index: 2;
+  outline: 1px solid #aaaaaa;
+}
+
+.old-input {
+  border-top-left-radius: .4rem;
+  border-top-right-radius: .4rem;
+}
+
+.pass-input {
+  margin-bottom: 20px;
+	border-bottom-left-radius: .4rem;
+  border-bottom-right-radius: .4rem;
+}
+
+.btn-pass {
+  background-color: transparent;
+  border: 1px solid #243b55;
+  padding: .6rem 2rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.btn-pass:hover {
+  background-color: #243b55;
+  color: #e1e1e1;
+}
+
+/* password chango done */
+.ch-done {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  border: 1px solid rgba(0,0,0,0.1);
+  width: 28rem;
+  font-family: 'Ubuntu', sans-serif;
+}
