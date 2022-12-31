@@ -1,0 +1,28 @@
+<nav class="navbar">
+    <a href="#" class="logo">Sociality</a>
+    {% if request.user.is_authenticated %}
+    <ul>
+        <li>
+            <a {% if section == "dashboard" %} class="selected" {% endif %} href="{% url 'dashboard' %}">Dashboard</a>
+        </li>
+        
+        <li>
+            <a {% if section == "images" %} class="selected" {% endif %} href="#">Images</a>
+        </li>
+        
+        <li>
+            <a {% if section == "people" %} class="selected" {% endif %} href="#">People</a>
+        </li>
+    </ul>
+    {% endif %}
+    <span>
+        {% if request.user.is_authenticated %}
+        <div class="wel-out">
+            <p>Hello {{ request.user.first_name|default:request.user.username }}</p>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </span>
+</nav>
