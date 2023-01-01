@@ -133,16 +133,6 @@ body {
   box-shadow: none;
 }
 
-@keyframes btn-anim1 {
-  0% {
-    left: -100%;
-  }
-  50%,
-  100% {
-    left: 100%;
-  }
-}
-
 .login-box a span:nth-child(2) {
   top: -100%;
   right: 0;
@@ -151,16 +141,6 @@ body {
   background: linear-gradient(180deg, transparent, #03e9f4);
   animation: btn-anim2 1s linear infinite;
   animation-delay: .5s;
-}
-
-@keyframes btn-anim2 {
-  0% {
-    top: -100%;
-  }
-  50%,
-  100% {
-    top: 100%;
-  }
 }
 
 .login-box a span:nth-child(3) {
@@ -216,5 +196,25 @@ body {
   50%,
   100% {
     bottom: 100%;
+  }
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
   }
 }
