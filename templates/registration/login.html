@@ -12,7 +12,7 @@
   <div class="login-box">
     <h2>Login</h2>
     {% if form.errors %}
-        <p>username or password is wrong</p>
+        <p class="log-err">username or password is wrong</p>
     {% endif %}
     <form method="post">{% csrf_token %}
       <div class="user-box">
@@ -22,6 +22,9 @@
       <div class="user-box">
           {{ form.password }}
           <label >Password</label>
+      </div>
+      <div class="reset-txt">
+        <a href="{% url 'password_reset' %}">Forgot password?</a>
       </div>
       <a href="#">
         <span></span>

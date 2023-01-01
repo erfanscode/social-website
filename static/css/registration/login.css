@@ -119,6 +119,20 @@ body {
   animation: btn-anim1 1s linear infinite;
 }
 
+.reset-txt a {
+  font-size: 14px !important;
+  letter-spacing: 1px !important;
+  padding: 0 0 !important;
+  margin-top: 20px !important;
+  text-transform: none !important;
+}
+
+.reset-txt a:hover {
+  color: #02c2cc;
+  background: none !important;
+  box-shadow: none;
+}
+
 @keyframes btn-anim1 {
   0% {
     left: -100%;
@@ -136,7 +150,7 @@ body {
   height: 100%;
   background: linear-gradient(180deg, transparent, #03e9f4);
   animation: btn-anim2 1s linear infinite;
-  animation-delay: 0.25s;
+  animation-delay: .5s;
 }
 
 @keyframes btn-anim2 {
@@ -156,7 +170,7 @@ body {
   height: 2px;
   background: linear-gradient(270deg, transparent, #03e9f4);
   animation: btn-anim3 1s linear infinite;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 
 .login-btn {
@@ -164,16 +178,6 @@ body {
     border: none;
     color: #fff;
     cursor: pointer;
-}
-
-@keyframes btn-anim3 {
-  0% {
-    right: -100%;
-  }
-  50%,
-  100% {
-    right: 100%;
-  }
 }
 
 .login-box a span:nth-child(4) {
@@ -184,6 +188,25 @@ body {
   background: linear-gradient(360deg, transparent, #03e9f4);
   animation: btn-anim4 1s linear infinite;
   animation-delay: 0.75s;
+}
+
+.log-err {
+  color: #f1f1f1;
+  text-align: center;
+  border-bottom: 1px solid #f1f1f1;
+  width: fit-content;
+  margin: 2rem auto;
+  padding-bottom: 5px;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
 }
 
 @keyframes btn-anim4 {
