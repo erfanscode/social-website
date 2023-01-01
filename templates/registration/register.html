@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="reg-html" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="{% static 'css/registration/login.css' %}">
+</head>
+<body>
+  <div class="login-box reg-box">
+    <h2>Sign up</h2>
+    <form method="post">{% csrf_token %}
+        <div class="user-box">
+            {{ user_form.username }}
+            <label>username</label>
+        </div>
+      
+        <div class="user-box">
+            {{ user_form.first_name }}
+            <label>first_name</label>
+        </div>
+      
+        <div class="user-box">
+            {{ user_form.last_name }}
+            <label>last_name</label>
+        </div>
+
+        <div class="user-box">
+            {{ user_form.email }}
+            <label>email</label>
+        </div>
+      
+        <div class="user-box">
+          {{ user_form.password }}
+          <label >password</label>
+        </div>
+        
+        <div class="user-box">
+            {{ user_form.password2 }}
+            <label >repeat-password</label>
+        </div>
+      <div class="reset-txt">
+        <p>if you have an account <a style="margin-bottom: -1px;" href="{% url 'login' %}">Login</a></p>
+      </div>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <input type="hidden" name="next" value="{{ next }}">
+        <input class="login-btn" type="submit" value="Register">
+      </a>
+    </form>
+  </div>
+</body>
+</html>

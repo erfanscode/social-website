@@ -2,6 +2,10 @@ html {
   height: 100%;
 }
 
+.reg-html {
+  height: 120vh;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +31,10 @@ body {
 .logout-msg p a {
     font-size: 1.5rem;
     color: #03e9f4;
+}
+
+.reg-box {
+  margin-top: 4rem;
 }
 
 .login-box {
@@ -117,6 +125,13 @@ body {
   height: 2px;
   background: linear-gradient(90deg, transparent, #03e9f4);
   animation: btn-anim1 1s linear infinite;
+}
+
+.reset-txt p {
+  font-family: sans-serif;
+  margin: auto;
+  color: #e0e0e0;
+  letter-spacing: 1px;
 }
 
 .reset-txt a {
