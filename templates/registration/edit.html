@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}Edit your account{% endblock %}
+{% block content %}
+
+<div class="edit-prof">
+    <h1>Edit your profile</h1>
+    <p class="edit-help">You can edit your profile using the following form</p>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        <p><input type="submit" value="Save changes"></p>
+    </form>
+</div>
+
+{% endblock %}

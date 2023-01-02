@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
 }
 
-.navbar {
+.my-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,12 +15,15 @@ body {
 
 }
 
-.navbar ul {
+.my-navbar ul {
   display: flex;
   list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.navbar ul li a {
+.my-navbar ul li a {
   text-decoration: none;
   margin-left: 1rem;
   color: #f2f2f2;
@@ -28,7 +31,7 @@ body {
   transition: all .2s;
 }
 
-.navbar ul li a:hover {
+.my-navbar ul li a:hover {
   background-color: rgba(255, 255, 255, .4);
   padding: 1rem .2rem;
 }
@@ -136,4 +139,60 @@ body {
   border: 1px solid rgba(0,0,0,0.1);
   width: 28rem;
   font-family: 'Ubuntu', sans-serif;
+}
+
+/* edit profile page style */
+.edit-prof {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Ubuntu', sans-serif;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 40rem;
+}
+
+.edit-help {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.messages {
+  list-style: none;
+  width: fit-content;
+  margin: 0 auto;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.msg-err {
+  background-color: #f1faee;
+  margin-top: 1rem;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.60);
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.60);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.60);
+}
+
+li.error::after {
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(to right, #e74c3c, #d62c1a);
+}
+
+li.success::after {
+  bottom: 0;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to right, #2ecc71, #25a25a);
 }
