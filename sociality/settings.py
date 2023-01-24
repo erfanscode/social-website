@@ -45,11 +45,18 @@ INSTALLED_APPS = [
     # 3rd-party
     "widget_tweaks",
     "social_django",
+    # "django_extensions",
 ]
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+# Google Authentication:
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = env("DJANGO_SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = env("DJANGO_SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
+
+SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -112,6 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "account.authentication.EmailAuthBackend",
+    "social_core.backends.google.GoogleOAuth2",
 ]
 
 

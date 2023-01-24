@@ -233,3 +233,24 @@ body {
     top: 100%;
   }
 }
+
+/* Google Button */
+.google-btn {
+  text-transform: none !important;
+  letter-spacing: 2px !important;
+  border: 1px solid #03e9f4;
+  width: -webkit-fill-available;
+  text-align: center;
+}
+
+.google-btn i {
+  margin-right: .4rem;
+}
+
+.google-btn:hover {
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: 1px solid #e0e0e0;
+  color: #e0e0e0;
+}
